@@ -33,7 +33,7 @@ body{
 
 .container header{
     position: relative;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     color: #333;
 }
@@ -46,7 +46,6 @@ body{
     height: 3px;
     width: 27px;
     border-radius: 8px;
-    background-color: #4070f4;
 }
 
 .container form{
@@ -77,6 +76,7 @@ body{
 
 .image-container {
     flex: 0 0 auto;
+    text-align: center;
 }
 
 .container form .title{
@@ -251,4 +251,24 @@ form button i{
 .magnet-img {
     max-width: 200px; /* Adjust the size as needed */
     height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.sign-up-button {
+    display: block;
+    width: 200px; /* Match the width of the image */
+    padding: 10px;
+    margin: 20px auto 0;
+    text-align: center;
+    background-color: #265df2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.sign-up-button:hover {
+    background-color: #1e4bb8;
 }
