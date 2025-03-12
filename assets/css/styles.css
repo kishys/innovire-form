@@ -261,6 +261,7 @@ form button i{
     height: auto;
     display: block;
     margin: 0 auto;
+    border-radius: 10px;
 }
 
 .sign-up-button {
