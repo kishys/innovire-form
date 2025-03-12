@@ -1,21 +1,15 @@
 document.getElementById("registerForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
 
-    let formData = {
-        firstname: document.getElementById("firstname").value,
-        lastname: document.getElementById("lastname").value,
-        email: document.getElementById("email").value,
-        grade: document.getElementById("grade").value,
-        findout: document.getElementById("how").value,
-        questions: document.getElementById("extra").value
-    };
+    let form = event.target;
 
-    // Send data to Google Apps Script
-    fetch("https://script.google.com/macros/s/AKfycbwUivjsOR0hRMp-gqYLT7QgFIFTCFuLUZOBzARSr4MbaZzdDiR2TdbeuCu1YGexZiBPQg/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+    // Send data to FormSubmit
+    fetch(form.action, {
+        method: form.method,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
     })
-    .then(response => response.text()) 
+    .then(response => response.text())
     .then(data => {
         console.log("Response from server:", data);
         window.location.href = "thanks.html"; // Redirect AFTER sending data
