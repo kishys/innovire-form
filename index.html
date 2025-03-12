@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+        
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <title>Innovire Event Registration</title>
+</head>
+<body>
+    
+    <div class="container">
+        <header>Event Registration for Electromagnet Event</header>
+        <form action="https://formsubmit.co/kishansuhir@gmail.com" method="POST">
+            <div class="form first">
+                <div class="details personal">                    
+                    <label>For Innovire's first event of 2025, we're hosting an exciting hands-on workshop for students to explore the electrifying world of electromagnetism. Participants will get the unique chance to explore the principles of electromagnets and magnetic fields through an immersive and fun workshop! As well, participants will also receive the opportunity to apply their knowledge and build their own electromagnets as well as explore real-world applications such as Maglev trains and MRI machines!
+                    </label>
+
+                    <p class="whiteText">-</p>
+
+                    <p> 📅 When: Saturday, February 22nd, 2025</p>
+                    <p> ⏰ Time: 10:45 AM to 2:30 PM</p>
+                    <p> 📍 Where: MindShare Workspace (5100 Erin Mills Pkwy Suite I3, Mississauga, ON L5M 4Z5)</p>
+                    <p> 🎯 Who’s invited? Grades 6 to 12</p>
+                    
+                </div>
+
+                <div class="details personal">
+                    <span class="title">Sign Up Form</span>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>First Name</label>
+                            <input type="textarea" name="firstname" placeholder="Enter Your First Name" required>
+                        </div>
+                        
+                        <div class="input-field">
+                            <label>Last Name</label>
+                            <input type="text" name="lastname" placeholder="Enter Your Last Name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="Enter an Email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Grade</label>
+                            <input type="number" name="grade" placeholder="Enter Your School Grade">
+                        </div>
+
+                        <div class="input-field">
+                            <label>How did you find out about this event</label>
+                            <input type="text" name="how" placeholder="e.g. Social Media, Friends, etc.">
+                        </div>
+
+                        <div class="input-field">
+                            <label>Feel free to ask questions or comments!</label>
+                            <input type="text" name="extra" placeholder="Here!">
+                        </div>
+
+                    </div>
+                </div>
+                <button type="submit" class="nextBtn">
+                    <span class="btnText">Submit!</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
+                
+                </div>
+                <label>For any questions</label>
+                <br>
+                <label>- Feel free to DM us on Instagram at @innovireteam</label>
+                <br>
+                <label>- Email us at innovireteam@gmail.com!</label>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            let form = event.target;
+
+            // Send data to FormSubmit
+            fetch(form.action, {
+                method: form.method,
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(new FormData(form)).toString()
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log("Response from server:", data);
+                window.location.href = "thanks.html"; // Redirect AFTER sending data
+            })
+            .catch(error => console.error("Fetch Error:", error));
+        });
+    </script>
+</body>
+</html>
