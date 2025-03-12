@@ -72,11 +72,19 @@ body{
 
 .text-container {
     flex: 1;
+    margin-right: 20px;
+}
+
+.bubble {
+    background-color: rgba(163, 192, 227, 0.5); /* Less transparent background */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-radius: 10px
 }
 
 .image-container {
-    flex: 0 0 auto;
-    text-align: center;
+    margin-top: 15px;
 }
 
 .container form .title{

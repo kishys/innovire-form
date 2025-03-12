@@ -154,6 +154,15 @@ form button i{
     margin: 0 6px;
 }
 
+
+.bubble {
+    background-color: rgba(163, 192, 227, 0.5); /* Less transparent background */
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border-radius: 10px
+}
+
 @media (max-width: 750px) {
     .container form{
         overflow-y: scroll;
@@ -172,4 +181,40 @@ form button i{
     form .fields .input-field{
         width: 100%;
     }
+}
+
+.backBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: 1px solid #ccc;
+}
+
+.backBtn:hover {
+    background-color: #e0e0e0;
+}
+
+.nextBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #265df2;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: none;
+}
+
+.nextBtn:hover {
+    background-color: #1e4bb8;
 }
