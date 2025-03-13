@@ -7,15 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 body{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, black, #4070f4);
-
 }
 
 .ting{
@@ -62,7 +59,6 @@ body{
     background-color: #fff;
 }
 
-
 .container form .details{
     margin-top: 30px;
 }
@@ -103,14 +99,12 @@ body{
     color: #333;
 }
 
-
 .container form .fields{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 
 form .fields .input-field{
     display: flex;
@@ -130,7 +124,6 @@ form .fields .input-field{
     font-size: 14px;
     font-weight: 400;
     color: #333;
-
     border-radius: 5px;
     border: 1px solid #aaa;
     padding: 0 15px;
@@ -138,12 +131,9 @@ form .fields .input-field{
     margin: 8px 0;
 }
 
-
 .input-field input:is(:focus,:valid){
     box-shadow: 0 3px 6px rgba(0,0,0,0.13);
-    
 }
-
 
 .input-field input[type="date"]{
     color: #707070;
@@ -152,8 +142,6 @@ form .fields .input-field{
 .input-field input[type="date"]:valid{
     color: #333;
 }
-
-
 
 .container form button{
     display: flex;
@@ -171,8 +159,6 @@ form .fields .input-field{
     transition: all 0.3s linear;
     cursor: pointer;
 }
-
-
 
 form button:hover{
     background-color: #265df2;
@@ -194,33 +180,30 @@ form button i{
     }
 }
 
-
-
 @media (max-width: 500px) {
     form .fields .input-field{
         width: 100%;
     }
 }
 
-
 .projects__content {
     display: grid;
     gap: 1.5rem;
-  }
-  
-  .projects__card {
+}
+
+.projects__card {
     position: relative;
     border-radius: 1rem;
     overflow: hidden;
-  }
-  
-  .projects__card img {
+}
+
+.projects__card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  
-  .projects__modal {
+}
+
+.projects__modal {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -233,23 +216,23 @@ form button i{
     align-items: flex-end;
     padding: 1.5rem 1.25rem;
     transition: .3s;
-  }
-  
-  .projects__subtitle {
+}
+
+.projects__subtitle {
     color: #fff;
     font-size: var(--smaller-font-size);
     margin-bottom: .25rem;
-  }
-  
-  .projects__title {
+}
+
+.projects__title {
     color: #fff;
     font-size: var(--h3-font-size);
     margin-bottom: .75rem;
-  }
-  
-  .projects__card:hover .projects__modal {
+}
+
+.projects__card:hover .projects__modal {
     bottom: 0;
-  }
+}
 
 .projects__card-link {
     display: block;
@@ -287,4 +270,43 @@ form button i{
 
 .sign-up-button:hover {
     background-color: #1e4bb8;
+}
+
+/* Additional media queries for mobile-friendliness */
+@media (max-width: 750px) {
+    .details.personal {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .text-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .projects__content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 20px;
+    }
+    .sign-up-button {
+        width: 100%;
+    }
+    .details.personal {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .image-container, .sign-up-button {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+    }
 }
