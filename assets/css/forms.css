@@ -7,15 +7,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-
 body{
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, black, #4070f4);
-
 }
 
 .whiteText {color:white;}
@@ -56,7 +53,6 @@ body{
     background-color: #fff;
 }
 
-
 .container form .details{
     margin-top: 30px;
 }
@@ -64,7 +60,6 @@ body{
 .container form .details.ID{
     margin-top: 20px;
 }
-
 
 .container form .title{
     display: block;
@@ -75,14 +70,12 @@ body{
     color: #333;
 }
 
-
 .container form .fields{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 
 form .fields .input-field{
     display: flex;
@@ -102,7 +95,6 @@ form .fields .input-field{
     font-size: 14px;
     font-weight: 400;
     color: #333;
-
     border-radius: 5px;
     border: 1px solid #aaa;
     padding: 0 15px;
@@ -110,12 +102,9 @@ form .fields .input-field{
     margin: 8px 0;
 }
 
-
 .input-field input:is(:focus,:valid){
     box-shadow: 0 3px 6px rgba(0,0,0,0.13);
-    
 }
-
 
 .input-field input[type="date"]{
     color: #707070;
@@ -124,8 +113,6 @@ form .fields .input-field{
 .input-field input[type="date"]:valid{
     color: #333;
 }
-
-
 
 .container form button{
     display: flex;
@@ -144,8 +131,6 @@ form .fields .input-field{
     cursor: pointer;
 }
 
-
-
 form button:hover{
     background-color: #265df2;
 }
@@ -154,13 +139,12 @@ form button i{
     margin: 0 6px;
 }
 
-
 .bubble {
     background-color: rgba(163, 192, 227, 0.5); /* Less transparent background */
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 @media (max-width: 750px) {
@@ -174,8 +158,6 @@ form button i{
         width: calc(100% /2 - 15px);
     }
 }
-
-
 
 @media (max-width: 500px) {
     form .fields .input-field{
@@ -217,4 +199,17 @@ form button i{
 
 .nextBtn:hover {
     background-color: #1e4bb8;
+}
+
+@media (max-width: 750px) {
+    .container form .fields .input-field {
+        width: 100%;
+    }
+    .container form .details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container form .details .input-field {
+        width: 100%;
+    }
 }
