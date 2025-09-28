@@ -27,6 +27,9 @@ const Navbar = () => {
             <Link href="/form" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">
               Register
             </Link>
+            <a href="https://innovire.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-neon-cyan transition-colors duration-300">
+              Main Site
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -58,6 +61,15 @@ const Navbar = () => {
               >
                 Register
               </Link>
+              <a 
+                href="https://innovire.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block px-3 py-2 text-gray-300 hover:text-neon-cyan transition-colors duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Main Site
+              </a>
             </div>
           </div>
         )}
