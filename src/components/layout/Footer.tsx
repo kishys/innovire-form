@@ -15,7 +15,7 @@ const Footer = () => {
               <span className="text-xl font-bold">Innovire Events</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              A student-led STEM non-profit organization dedicated to inspiring the next generation through hands-on learning experiences.
+              Join a community of young innovators, mentors, and changemakers shaping the future of Science, Technology, Engineering, and Mathematics.
             </p>
           </div>
 

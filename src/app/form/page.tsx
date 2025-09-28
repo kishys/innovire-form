@@ -35,7 +35,7 @@ export default function FormPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Event Registration Form
+            Join Our Next STEM Event
           </h1>
         </div>
 
@@ -209,13 +209,13 @@ export default function FormPage() {
                 <h3 className="text-xl font-bold text-neon-cyan mb-4">About the Workshop</h3>
                 <div className="text-gray-300 leading-relaxed space-y-4">
                   <p>
-                    For Innovire's first event of 2025, we're hosting an exciting hands-on workshop for students to explore the electrifying world of electromagnetism.
+                    Join a community of young innovators, mentors, and changemakers as we explore the fascinating world of electromagnetism through hands-on learning.
                   </p>
                   <p>
-                    Participants will get the unique chance to explore the principles of electromagnets and magnetic fields through an immersive and fun workshop!
+                    This workshop is designed to accelerate your STEM journey with immersive activities where you'll build your own electromagnets and discover real-world applications.
                   </p>
                   <p>
-                    Students will also receive the opportunity to apply their knowledge and build their own electromagnets, as well as explore real-world applications such as Maglev trains and MRI machines!
+                    Experience the future of Science, Technology, Engineering, and Mathematics through interactive exploration of Maglev trains, MRI machines, and more!
                   </p>
                 </div>
               </div>

@@ -14,7 +14,7 @@ export default function ThanksPage() {
             <CheckCircle className="h-24 w-24 text-neon-cyan drop-shadow-[0_0_16px_rgba(0,255,255,0.5)]" />
           </div>
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Registration Successful!
+            Welcome to the Community!
           </h1>
         </div>
 
@@ -25,7 +25,7 @@ export default function ThanksPage() {
             {/* Thank You Message */}
             <div className="text-center mb-8">
               <p className="text-lg text-gray-300 leading-relaxed">
-                Thank you for signing up for Innovire's Electromagnet Workshop! We're excited to have you join us for this hands-on learning experience.
+                Thank you for joining our community of young innovators! We're excited to have you participate in this hands-on STEM learning experience that will help accelerate your journey in Science, Technology, Engineering, and Mathematics.
               </p>
             </div>
 

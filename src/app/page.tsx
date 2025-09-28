@@ -11,9 +11,9 @@ export default function HomePage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Innovire Event Registration
+            Join Our STEM Community
           </h1>
-          <p className="text-lg text-gray-300">Register for our upcoming STEM workshop</p>
+          <p className="text-lg text-gray-300">Register for hands-on workshops designed to accelerate your STEM journey</p>
         </div>
 
         {/* Main Event Card */}
@@ -24,7 +24,7 @@ export default function HomePage() {
               {/* Event Info */}
               <div className="space-y-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-neon-cyan mb-4">
-                  Electromagnet Workshop
+                  Electromagnet Workshop 2025
                 </h2>
                 
                 <div className="space-y-4">
