@@ -35,7 +35,7 @@ export default function FormPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Join Our Next STEM Event
+            Join Our Next Innovire Event
           </h1>
         </div>
 
