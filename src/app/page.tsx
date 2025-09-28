@@ -11,7 +11,7 @@ export default function HomePage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Join Our STEM Community
+            Innovire Signup Hub
           </h1>
           <p className="text-lg text-gray-300">Register for hands-on workshops designed to accelerate your STEM journey</p>
         </div>
@@ -72,6 +72,13 @@ export default function HomePage() {
                   <ArrowRight className="h-5 w-5" />
                 </Link>
               </div>
+            </div>
+            
+            {/* Event Description */}
+            <div className="mt-8 pt-6 border-t border-gray-600">
+              <p className="text-gray-300 text-center leading-relaxed">
+                Join us for an exciting hands-on workshop where students will build their own electromagnets and explore real-world applications like Maglev trains and MRI machines.
+              </p>
             </div>
           </div>
         </div>
