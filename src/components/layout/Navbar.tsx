@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
+import innovireLogo from '@/logo/innovire-logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,9 +15,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 bg-neon-cyan rounded-full flex items-center justify-center text-dark-blue font-bold text-sm">
-              I
-            </div>
+            <Image
+              src={innovireLogo}
+              alt="Innovire Logo"
+              width={32}
+              height={32}
+              className="rounded"
+              priority
+            />
             <span className="text-xl font-bold text-white">Innovire Events</span>
           </Link>
 

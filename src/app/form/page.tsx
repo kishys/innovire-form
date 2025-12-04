@@ -1,10 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { ArrowRight, Calendar, Clock, MapPin, Target, Instagram, Mail, ArrowLeft, User, UserCheck, GraduationCap } from 'lucide-react'
+import { ArrowRight, Calendar, Clock, MapPin, Target, Instagram, Mail, ArrowLeft, User, UserCheck, GraduationCap, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 export default function FormPage() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -13,6 +15,9 @@ export default function FormPage() {
     how: '',
     extra: ''
   })
+
+  const [submitting, setSubmitting] = useState(false)
+  const [showSuccess, setShowSuccess] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -24,12 +29,54 @@ export default function FormPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission - you can integrate with FormSubmit or any other service
-    window.location.href = '/thanks'
+    setSubmitting(true)
+
+    try {
+      // Save to our API
+      await fetch('/api/responses', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      // Also send to FormSubmit for email notification
+      const form = e.target as HTMLFormElement
+      const formSubmitData = new FormData(form)
+      await fetch('https://formsubmit.co/kishansuhir@gmail.com', {
+        method: 'POST',
+        body: formSubmitData,
+      })
+
+      // Show success animation
+      setShowSuccess(true)
+
+      // Wait 2 seconds then redirect to home
+      setTimeout(() => {
+        router.push('/')
+      }, 2000)
+    } catch (error) {
+      console.error('Submission error:', error)
+      alert('There was an error submitting the form. Please try again.')
+      setSubmitting(false)
+    }
   }
 
   return (
-    <div className="min-h-screen bg-dark-blue pt-20 pb-12">
+    <div className="min-h-screen bg-dark-blue pt-20 pb-12 relative">
+      {/* Success Animation Overlay */}
+      {showSuccess && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center animate-fadeIn">
+          <div className="text-center">
+            <div className="mb-4 animate-checkmark">
+              <CheckCircle className="h-24 w-24 text-neon-cyan mx-auto drop-shadow-[0_0_30px_rgba(0,255,255,0.8)]" />
+            </div>
+            <p className="text-white text-2xl font-semibold animate-slideUp">
+              Registration Successful!
+            </p>
+          </div>
+        </div>
+      )}
+
       <div className="container mx-auto px-4">
         
         {/* Header */}
@@ -50,7 +97,7 @@ export default function FormPage() {
                   Registration Details
                 </h2>
                 
-                <form action="https://formsubmit.co/kishansuhir@gmail.com" method="POST" className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* First Name */}
                     <div className="space-y-2">
@@ -156,9 +203,10 @@ export default function FormPage() {
                   <div className="pt-4">
                     <button
                       type="submit"
-                      className="w-full bg-neon-cyan text-dark-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-400 transition-colors duration-200 flex items-center justify-center space-x-2"
+                      disabled={submitting}
+                      className="w-full bg-neon-cyan text-dark-blue px-8 py-4 rounded-lg font-bold text-lg hover:bg-cyan-400 transition-colors duration-200 flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <span>Submit!</span>
+                      <span>{submitting ? 'Submitting...' : 'Submit!'}</span>
                       <ArrowRight className="h-5 w-5" />
                     </button>
                   </div>

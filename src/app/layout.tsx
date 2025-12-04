@@ -10,6 +10,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Innovire Event Registration',
   description: 'Register for Innovire\'s Electromagnet Workshop - hands-on STEM learning experience',
+  icons: {
+    icon: '/logo/innovire-logo.png',
+    apple: '/logo/innovire-logo.png',
+  },
 }
 
 export default function RootLayout({

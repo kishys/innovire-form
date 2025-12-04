@@ -1,8 +1,26 @@
-import { Instagram, Mail, Globe } from 'lucide-react'
+'use client'
+
+import { Instagram, Mail, Globe, Lightbulb } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 
 const Footer = () => {
+  const router = useRouter()
+
+  const handleAdminClick = () => {
+    router.push('/admin/login')
+  }
+
   return (
-    <footer className="bg-space-gray text-white">
+    <footer className="bg-space-gray text-white relative">
+      {/* Admin Lightbulb Button */}
+      <button
+        onClick={handleAdminClick}
+        className="absolute top-4 left-4 p-2 rounded-full bg-dark-blue/50 hover:bg-neon-cyan/20 border border-gray-600 hover:border-neon-cyan transition-all duration-300 group"
+        aria-label="Admin Login"
+      >
+        <Lightbulb className="h-5 w-5 text-gray-400 group-hover:text-neon-cyan transition-colors" />
+      </button>
+
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           

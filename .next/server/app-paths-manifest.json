@@ -1,4 +1,8 @@
 {
   "/page": "app/page.js",
-  "/form/page": "app/form/page.js"
+  "/admin/responses/page": "app/admin/responses/page.js",
+  "/form/page": "app/form/page.js",
+  "/api/auth/verify/route": "app/api/auth/verify/route.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/api/responses/route": "app/api/responses/route.js"
 }
