@@ -39,14 +39,6 @@ export default function FormPage() {
         body: JSON.stringify(formData),
       })
 
-      // Also send to FormSubmit for email notification
-      const form = e.target as HTMLFormElement
-      const formSubmitData = new FormData(form)
-      await fetch('https://formsubmit.co/kishansuhir@gmail.com', {
-        method: 'POST',
-        body: formSubmitData,
-      })
-
       // Show success animation
       setShowSuccess(true)
 
